@@ -8,6 +8,23 @@ A powerful Java expression evaluation and templating library with a clean, flexi
 ## Overview
 Canvas provides a lightweight framework for parsing, evaluating, and working with expressions in Java applications. It supports both mathematical and boolean logic operations, field access with dot notation, and string templating with expression-based substitutions.
 
+## Installation
+Canvas can be added to your project using JitPack.
+
+```kotlin
+repositories {
+    mavenCentral()
+    maven { url = "https://jitpack.io" }
+}
+
+dependencies {
+  implementation("com.github.theblessedgarden:Canvas:Tag")
+}
+```
+
+Replace `Tag` with a specific commit hash.
+For more versions, check out [this](https://jitpack.io/#theblessedgarden/Canvas).
+
 ## Features
 
 ### Expression Evaluation
