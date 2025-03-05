@@ -36,8 +36,10 @@ public interface Context {
         Map<String, Object> merged = new HashMap<>();
 
         for (Context context : contexts) {
-            if (context instanceof MapContext) {
-                merged.putAll(((MapContext) context).getDataMap());
+            if (context instanceof MapContext mapContext) {
+                merged.putAll((mapContext.getDataMap()));
+            } else if (context instanceof MutableContext mutableContext) {
+                merged.putAll(mutableContext.getDataMap());
             }
         }
 
